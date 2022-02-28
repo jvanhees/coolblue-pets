@@ -6,10 +6,11 @@ import { Text } from './text/Text';
 import { Heading } from './heading/Heading';
 
 export default {
+    title: 'Typography',
     component: Heading,
 } as ComponentMeta<typeof Heading>;
 
-const Template: ComponentStory<typeof Heading> = args => (
+export const Typography: ComponentStory<typeof Heading> = () => (
     <>
         <Heading level={1}>Heading 1</Heading>
         <Heading as="h2" level={2}>
@@ -24,5 +25,3 @@ const Template: ComponentStory<typeof Heading> = args => (
         <Text>Body text</Text>
     </>
 );
-
-export const Typography = Template.bind({});

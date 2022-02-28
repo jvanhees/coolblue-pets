@@ -2,25 +2,26 @@ import React, { useState } from 'react';
 
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
-import { Searchbar } from './Searchbar';
+import { Searchbar as SearchbarComponent } from './Searchbar';
 
 export default {
-    component: Searchbar,
-} as ComponentMeta<typeof Searchbar>;
+    title: 'UI/Searchbar',
+    component: SearchbarComponent,
+} as ComponentMeta<typeof SearchbarComponent>;
 
-export const SearchbarStory: ComponentStory<typeof Searchbar> = () => {
+export const Searchbar: ComponentStory<typeof SearchbarComponent> = () => {
     const [value, setValue] = useState<string>('');
 
     return (
         <>
             <p>Current value: {value}</p>
-            <Searchbar value={value} onChange={e => setValue(e.target.value)} />
-            <Searchbar value={value} onChange={e => setValue(e.target.value)} contained={true} />
+            <SearchbarComponent value={value} onChange={e => setValue(e.target.value)} />
+            <SearchbarComponent value={value} onChange={e => setValue(e.target.value)} contained={true} />
 
-            <Searchbar value={value} onChange={e => setValue(e.target.value)} contained={true}>
+            <SearchbarComponent value={value} onChange={e => setValue(e.target.value)} contained={true}>
                 <span>An inline result</span>
                 <span>Another result</span>
-            </Searchbar>
+            </SearchbarComponent>
         </>
     );
 };

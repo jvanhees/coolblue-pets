@@ -2,12 +2,13 @@ import React from 'react';
 
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
-import { Base } from './Base';
+import { Base as BaseComponent } from './Base';
 
 export default {
-    component: Base,
-} as ComponentMeta<typeof Base>;
+    title: 'UI/Base',
+    component: BaseComponent,
+} as ComponentMeta<typeof BaseComponent>;
 
-const Template: ComponentStory<typeof Base> = args => <Base {...args}>Basic UI element</Base>;
-
-export const Primary = Template.bind({});
+export const Base: ComponentStory<typeof BaseComponent> = args => (
+    <BaseComponent {...args}>Basic UI element</BaseComponent>
+);

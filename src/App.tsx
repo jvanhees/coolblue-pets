@@ -1,22 +1,27 @@
 import React, { FC } from 'react';
 import { ThemeProvider } from 'styled-components';
+import { Routes, Route } from 'react-router-dom';
 
 import theme from './styles/theme';
 
 import GlobalStyle from './styles/GlobalStyle';
-import { Button } from './components/ui/button/Button';
-import { Heading } from './components/typography/heading/Heading';
+import { Header } from 'components/elements/header/Header';
+import { AppContainer } from 'components/ui/app-container/AppContainer';
+import { Home } from 'components/pages/home/Home';
+import { AppProvider } from 'context/AppContext';
 
 const App: FC = () => {
     return (
         <ThemeProvider theme={theme}>
-            <GlobalStyle />
-            <div className="App">
-                <Heading level={1} as="h1">
-                    Heading 1
-                </Heading>
-                <Button primary={true}>Hello</Button>
-            </div>
+            <AppProvider>
+                <GlobalStyle />
+                <Header></Header>
+                <AppContainer>
+                    <Routes>
+                        <Route path="/" element={<Home />} />
+                    </Routes>
+                </AppContainer>
+            </AppProvider>
         </ThemeProvider>
     );
 };

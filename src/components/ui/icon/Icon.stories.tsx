@@ -2,7 +2,7 @@ import React from 'react';
 
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
-import { Icon } from './Icon';
+import { Icon as IconComponent } from './Icon';
 
 import { ReactComponent as PinIcon } from 'assets/icons/pin.svg';
 import { ReactComponent as MenuIcon } from 'assets/icons/menu.svg';
@@ -10,22 +10,23 @@ import { ReactComponent as ClockIcon } from 'assets/icons/clock.svg';
 import { ReactComponent as HomeIcon } from 'assets/icons/home.svg';
 
 export default {
-    component: Icon,
-} as ComponentMeta<typeof Icon>;
+    title: 'UI/Icon',
+    component: IconComponent,
+} as ComponentMeta<typeof IconComponent>;
 
-export const Icons: ComponentStory<typeof Icon> = () => (
+export const Icon: ComponentStory<typeof IconComponent> = () => (
     <>
-        <Icon>
+        <IconComponent>
             <PinIcon />
-        </Icon>
-        <Icon primary={true}>
+        </IconComponent>
+        <IconComponent primary={true}>
             <MenuIcon />
-        </Icon>
-        <Icon>
+        </IconComponent>
+        <IconComponent>
             <ClockIcon />
-        </Icon>
-        <Icon primary={true}>
+        </IconComponent>
+        <IconComponent primary={true}>
             <HomeIcon />
-        </Icon>
+        </IconComponent>
     </>
 );

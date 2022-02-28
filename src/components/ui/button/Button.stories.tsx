@@ -7,6 +7,7 @@ import { Button } from './Button';
 import { ReactComponent as HomeIcon } from 'assets/icons/home.svg';
 
 export default {
+    title: 'UI/Button',
     component: Button,
 } as ComponentMeta<typeof Button>;
 

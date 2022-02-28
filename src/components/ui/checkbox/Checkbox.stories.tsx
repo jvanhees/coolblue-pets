@@ -2,19 +2,20 @@ import React from 'react';
 
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
-import { Checkbox } from './Checkbox';
+import { Checkbox as CheckboxComponent } from './Checkbox';
 
 export default {
-    component: Checkbox,
-} as ComponentMeta<typeof Checkbox>;
+    title: 'UI/Checkbox',
+    component: CheckboxComponent,
+} as ComponentMeta<typeof CheckboxComponent>;
 
-export const Icons: ComponentStory<typeof Checkbox> = () => (
+export const Checkbox: ComponentStory<typeof CheckboxComponent> = () => (
     <>
         <div>
-            <Checkbox label="Unchecked" />
+            <CheckboxComponent label="Unchecked" />
         </div>
         <div>
-            <Checkbox label="Checked" checked />
+            <CheckboxComponent label="Checked" checked />
         </div>
     </>
 );

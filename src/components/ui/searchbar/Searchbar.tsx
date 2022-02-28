@@ -1,6 +1,5 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
-import { Base } from '../base/Base';
 import { Icon } from '../icon/Icon';
 
 import { ReactComponent as SearchIcon } from 'assets/icons/search.svg';

@@ -2,18 +2,17 @@ import React from 'react';
 
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
-import { Pill } from './Pill';
+import { Pill as PillComponent } from './Pill';
 
 export default {
-    component: Pill,
-} as ComponentMeta<typeof Pill>;
+    title: 'UI/Pill',
+    component: PillComponent,
+} as ComponentMeta<typeof PillComponent>;
 
-const Template: ComponentStory<typeof Pill> = args => (
+export const Pill: ComponentStory<typeof PillComponent> = args => (
     <>
-        <Pill {...args}>Pill 1</Pill>
-        <Pill {...args}>Pill 2</Pill>
-        <Pill {...args}>Pill 3</Pill>
+        <PillComponent {...args}>Pill 1</PillComponent>
+        <PillComponent {...args}>Pill 2</PillComponent>
+        <PillComponent {...args}>Pill 3</PillComponent>
     </>
 );
-
-export const Primary = Template.bind({});

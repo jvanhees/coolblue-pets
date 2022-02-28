@@ -1,0 +1,3 @@
+-   Add translation service
+-   More unit testing
+-   Add docstrings where applicable
