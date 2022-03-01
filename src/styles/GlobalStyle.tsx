@@ -12,13 +12,6 @@ const GlobalStyle = createGlobalStyle`
     font-size: ${props => props.theme.typography.fontSize};
   }
 
-  #root {
-    display: flex;
-    min-height: 100vh;
-    flex-direction: column;
-    justify-content: flex-start;
-  }
-
   * {
     box-sizing: border-box;
   }

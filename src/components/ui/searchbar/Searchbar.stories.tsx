@@ -16,9 +16,8 @@ export const Searchbar: ComponentStory<typeof SearchbarComponent> = () => {
         <>
             <p>Current value: {value}</p>
             <SearchbarComponent value={value} onChange={e => setValue(e.target.value)} />
-            <SearchbarComponent value={value} onChange={e => setValue(e.target.value)} contained={true} />
 
-            <SearchbarComponent value={value} onChange={e => setValue(e.target.value)} contained={true}>
+            <SearchbarComponent value={value} onChange={e => setValue(e.target.value)}>
                 <span>An inline result</span>
                 <span>Another result</span>
             </SearchbarComponent>

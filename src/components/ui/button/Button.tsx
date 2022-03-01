@@ -7,7 +7,6 @@ import { ReactComponent as ArrowRight } from 'assets/icons/arrow-right.svg';
 
 type ButtonProps = {
     primary?: boolean;
-    iconOnly?: boolean;
 };
 
 export const ButtonElement = styled(Base.withComponent('button'))<ButtonProps>`
