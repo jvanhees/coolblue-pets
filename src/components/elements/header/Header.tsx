@@ -27,7 +27,7 @@ export const Header: React.FC = () => {
     const media = `(min-width: ${themeContext.breakpoints.mobile})`;
     return (
         <HeaderContainer>
-            <Link to="/">
+            <Link to="/" aria-label="Navigate to home">
                 <LogoContainer>
                     <picture>
                         <source type="image/svg+xml" srcSet={PetIcon} media={media} />

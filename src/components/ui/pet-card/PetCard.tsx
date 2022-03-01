@@ -5,6 +5,7 @@ import { Pet } from 'interfaces/Pets';
 import React from 'react';
 import styled from 'styled-components';
 import { Button } from '../button/Button';
+import { getImgurSize } from 'util/getImgurSize';
 
 const PetCardContainer = styled.div`
     display: flex;
@@ -45,7 +46,7 @@ export const PetCard: React.FC<{ pet: Pet }> = ({ pet }) => {
     return (
         <PetCardContainer>
             <PetCardPicture>
-                <PetCardImg src={pet.photo} alt={`${pet.title} photo`} />
+                <PetCardImg src={getImgurSize(pet.photo, 'l')} alt={`${pet.title} photo`} />
             </PetCardPicture>
             <PetCardTitle>
                 <Heading level={4} as="h3">

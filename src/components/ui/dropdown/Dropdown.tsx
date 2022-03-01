@@ -1,6 +1,4 @@
-import React from 'react';
-
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 import { Base } from './../base/Base';
 
 import ChevronIcon from 'assets/icons/chevron-down.svg';

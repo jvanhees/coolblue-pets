@@ -4,8 +4,6 @@ import { ComponentStory, ComponentMeta } from '@storybook/react';
 
 import { Button } from './Button';
 
-import { ReactComponent as HomeIcon } from 'assets/icons/home.svg';
-
 export default {
     title: 'UI/Button',
     component: Button,

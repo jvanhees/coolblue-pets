@@ -6,6 +6,6 @@ export const mapPet = (pet: PetResponseAttributes): Pet => {
         ...pet,
         title: pet.name,
         available: pet.available === 'Yes' ? true : false,
-        dateAdded: new Date(parseInt(year), parseInt(month), parseInt(day)),
+        dateAdded: new Date(parseInt(year), parseInt(month) - 1, parseInt(day)),
     };
 };

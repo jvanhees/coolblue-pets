@@ -23,14 +23,12 @@ export const Search: React.FC = () => {
         setSearchTerm(suggestion);
     }, []);
 
-    // Update search based on app state
+    // Update search for suggestions
     useEffect(() => {
-        if (searchTerm.length > 2) {
-            setCriteria({ title: searchTerm });
-        }
+        setCriteria({ title: searchTerm });
     }, [searchTerm]);
 
-    // Update app state
+    // Update app state to start app search
     useEffect(() => {
         dispatch({ type: 'SET_SEARCH_CRITERIA', payload: { ...state.searchCriteria, title: debouncedSearchTerm } });
     }, [debouncedSearchTerm]);
@@ -40,9 +38,13 @@ export const Search: React.FC = () => {
             <Searchbar
                 value={searchTerm}
                 onChange={handleSearchbarChange}
-                expanded={searchTerm.length > 2 && !loading && suggestions.length > 0}
+                expanded={searchTerm.length > 0 && !loading && suggestions.length > 1}
             >
-                <SearchSuggestions onSuggestionSelect={handleSuggestionSelect} suggestions={suggestions} />
+                <SearchSuggestions
+                    input={searchTerm}
+                    onSuggestionSelect={handleSuggestionSelect}
+                    suggestions={suggestions}
+                />
             </Searchbar>
         </>
     );

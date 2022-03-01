@@ -1,4 +1,4 @@
-import react, { FC } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 
 // Use StyledCheckbox for checkboxes without label
@@ -25,7 +25,7 @@ interface CheckboxProps extends React.InputHTMLAttributes<HTMLInputElement> {
     label: string;
 }
 
-export const Checkbox: FC<CheckboxProps> = ({ label, ...props }) => {
+export const Checkbox: React.FC<CheckboxProps> = ({ label, ...props }) => {
     return (
         <label>
             <StyledCheckbox {...props} type="checkbox" />

@@ -26,6 +26,10 @@ export const Carousel = styled.div<CarouselProps>`
         margin-left: 0.5em;
         margin-right: 0.5em;
         margin-bottom: 1em;
+
+        :last-child {
+            margin-bottom: 0;
+        }
     }
 
     @media (min-width: ${props => props.theme.breakpoints.mobile}) {

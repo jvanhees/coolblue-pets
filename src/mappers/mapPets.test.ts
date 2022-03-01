@@ -15,6 +15,6 @@ describe('mapPet', () => {
         const result = mapPet(petAttributes);
         expect(result.title).toBe('Daamin');
         expect(result.available).toBe(false);
-        expect(result.dateAdded).toBe(new Date(2021, 19, 6));
+        expect(result.dateAdded).toStrictEqual(new Date(2021, 5, 19));
     });
 });

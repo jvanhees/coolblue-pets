@@ -1,4 +1,18 @@
+-   [DONE] On this page, each pet profile should contain an `avatar picture, pet name, and a view option` to navigate to its own details page
+-   [DONE] On the top of the filter page there should be a `search option`, which performs a fuzzy search operation to filter pet results on the fly
+-   [DONE] At the bottom of the page you should show different `categories` for the pets
+-   [DONE - useDebounce] Use React hooks and build one custom hook (if possible)
+-   [DONE - AppContext] State management (like redux, mobx, or recoil etc.) to store and share the data
+-   [DONE] Application should be responsive
+-   [DONE] Make it accessible and use Semantic HTML
+-   [N/A] Use proper CSS naming conventions
+-   [DONE] Make your components reusable (Styled components)
+-   [DONE] Fetch data from given REST API endpoint
+-   [DONE - Chrome latest] Ensure it works on modern browsers
+
 -   Add translation service
 -   Add unit testing with Testing Libary
 -   Add docstrings where applicable
 -   Add Aria labels for accessebility
+-   Optimize hooks
+-   Improve fuzzy search
