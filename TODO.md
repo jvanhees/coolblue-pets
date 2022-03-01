@@ -16,3 +16,4 @@
 -   Add Aria labels for accessebility
 -   Optimize hooks
 -   Improve fuzzy search
+-   Deploy with Github Actions
