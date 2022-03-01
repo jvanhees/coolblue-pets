@@ -11,9 +11,11 @@ export const usePet = (): [{ result: Pet | undefined; loading: boolean }, (id: n
     const [result, setResult] = useState<Pet | undefined>();
 
     useEffect(() => {
+        // No point in searching an empty array
+        if (data.length == 0) return;
         // TODO: Abstract this filter to a separate file + unit tests
         const filtered = data.filter(pet => pet.id == id);
-        if (filtered.length === 1) {
+        if (filtered.length >= 1) {
             setResult(filtered[0]);
         } else {
             console.error(`${filtered.length} pets found with id ${id}`);

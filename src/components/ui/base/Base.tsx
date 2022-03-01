@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 
-// Padding on hover ensures no vertical jumping because of border width difference
 export const Base = styled.div`
     display: inline-block;
     padding: 0.5em 1em;
@@ -10,10 +9,9 @@ export const Base = styled.div`
     border: 1px solid ${props => props.theme.palette.shades.light};
     background-color: ${props => props.theme.palette.white};
     cursor: pointer;
+    outline: none;
 
     &:hover {
-        padding-top: calc(0.5em - 1px);
-        padding-bottom: calc(0.5em - 1px);
         font-weight: bold;
         border-width: 2px;
         border-color: ${props => props.theme.palette.primary};

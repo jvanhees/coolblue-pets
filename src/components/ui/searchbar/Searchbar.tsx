@@ -9,9 +9,10 @@ import { ReactComponent as SearchIcon } from 'assets/icons/search.svg';
 const Container = styled.div<{ contained: boolean }>`
     width: 100%;
     padding: 1em;
+    margin-bottom: 1em;
     display: flex;
     align-items: stretch;
-    border-radius: 1em;
+    border-radius: 2em;
     border: 1px solid ${props => props.theme.palette.shades.medium};
 
     &:focus-within {

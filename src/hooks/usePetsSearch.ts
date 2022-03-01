@@ -13,12 +13,12 @@ export const usePetsSearch = (): [{ results: Pet[]; loading: boolean }, (criteri
 
     useEffect(() => {
         setResults(
-            data.reduce((acc: Pet[], pet) => {
+            [...data].reduce((acc: Pet[], pet) => {
                 if (criteria && matchPet(pet, criteria)) acc.push(pet);
                 return acc;
             }, [])
         );
-    }, [criteria, data]);
+    }, [criteria?.available, criteria?.species, criteria?.title, data]);
 
     return [{ results, loading }, setCriteria];
 };
