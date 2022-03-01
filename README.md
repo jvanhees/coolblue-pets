@@ -33,6 +33,8 @@ Run storybook
 -   Optimize hooks
 -   Improve fuzzy search
 -   Deploy with Github Actions
+-   Remove vscode file from git repo
+-   Add TODO script to gather TODO's from code and insert them into a TODO.md
 
 ---
 
