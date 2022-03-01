@@ -8,6 +8,7 @@ type SpeciesOptions = 'Species' | 'Dog' | 'Cat';
 
 export const SearchFilters: React.FC = () => {
     const { state, dispatch } = useAppContext();
+    // TODO: Get default value from state
     const [available, setAvailable] = useState<AvailableOptions>('Available');
     const [species, setSpecies] = useState<SpeciesOptions>('Species');
 

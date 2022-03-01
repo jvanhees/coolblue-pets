@@ -1,14 +1,15 @@
+import { SearchCriteria } from 'context/AppContext';
 import { Pet } from 'interfaces/Pets';
 import { useEffect, useState } from 'react';
-import { matchPet, PetCriteria } from 'util/matchPet';
+import { matchPet } from 'util/matchPet';
 import { usePetsApi } from './usePets';
 
 /**
  * Hook for pet search based on criteria
  */
-export const usePetsSearch = (): [{ results: Pet[]; loading: boolean }, (criteria: PetCriteria) => void] => {
+export const usePetsSearch = (): [{ results: Pet[]; loading: boolean }, (criteria: SearchCriteria) => void] => {
     const [{ data, loading }] = usePetsApi();
-    const [criteria, setCriteria] = useState<PetCriteria>();
+    const [criteria, setCriteria] = useState<SearchCriteria>();
     const [results, setResults] = useState<Pet[]>([]);
 
     useEffect(() => {

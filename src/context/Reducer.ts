@@ -1,10 +1,9 @@
-import { PetCriteria } from 'util/matchPet';
-import { State } from './AppContext';
+import { SearchCriteria, State } from './AppContext';
 
 export type ActionTypes = 'SET_SEARCH_CRITERIA';
 export type Action = {
     type: ActionTypes;
-    payload?: PetCriteria;
+    payload?: SearchCriteria;
 };
 
 type ReducerType = (state: State, action: Action) => State;

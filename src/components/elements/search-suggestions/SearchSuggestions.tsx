@@ -35,8 +35,10 @@ export const SearchSuggestions: React.FC<SearchSuggestionsProps> = ({ input, onS
     // TODO: Split this into a separate view component
     return (
         <SuggestionContainer>
-            {results.map(pet => (
-                <Suggestion onClick={() => onSuggestionSelect(pet.title)}>{pet.title}</Suggestion>
+            {results.map((pet, index) => (
+                <Suggestion key={index} onClick={() => onSuggestionSelect(pet.title)}>
+                    {pet.title}
+                </Suggestion>
             ))}
         </SuggestionContainer>
     );

@@ -1,3 +1,4 @@
 -   Add translation service
--   More unit testing
+-   Add unit testing with Testing Libary
 -   Add docstrings where applicable
+-   Add Aria labels for accessebility

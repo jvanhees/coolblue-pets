@@ -45,7 +45,7 @@ export const PetCard: React.FC<{ pet: Pet }> = ({ pet }) => {
     return (
         <PetCardContainer>
             <PetCardPicture>
-                <PetCardImg src={pet.photo} />
+                <PetCardImg src={pet.photo} alt={`${pet.title} photo`} />
             </PetCardPicture>
             <PetCardTitle>
                 <Heading level={4} as="h3">

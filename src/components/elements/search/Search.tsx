@@ -5,7 +5,7 @@ import { SearchSuggestions } from '../search-suggestions/SearchSuggestions';
 
 export const Search: React.FC = () => {
     const { state, dispatch } = useAppContext();
-    const [searchTerm, setSearchTerm] = useState<string>('');
+    const [searchTerm, setSearchTerm] = useState<string>(state.searchCriteria.title || '');
 
     // Search bar handler
     const handleSearchbarChange = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {

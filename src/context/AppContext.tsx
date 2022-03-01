@@ -1,9 +1,14 @@
 import { createContext, Dispatch, useReducer } from 'react';
-import { PetCriteria } from 'util/matchPet';
 import { Action, Reducer } from './Reducer';
 
+export type SearchCriteria = {
+    title?: string;
+    species?: string;
+    available?: boolean;
+};
+
 export interface State {
-    searchCriteria: PetCriteria;
+    searchCriteria: SearchCriteria;
 }
 
 type Context = {
