@@ -19,9 +19,11 @@ const PetCardContainer = styled.div`
 const PetCardPicture = styled.picture`
     max-width: 45%;
     margin-right: 1.5em;
+    aspect-ratio: 1.2;
 
     @media (min-width: ${props => props.theme.breakpoints.mobile}) {
         max-width: 100%;
+        width: 100%;
         margin-right: 0;
     }
 `;
@@ -33,8 +35,8 @@ const PetCardTitle = styled.div`
 // Maybe better performance with css scaling?
 const PetCardImg = styled.img`
     width: 100%;
+    height: 100%;
     border-radius: 1em;
-    aspect-ratio: 1.2;
     object-fit: cover;
     image-rendering: -webkit-optimize-contrast;
 `;

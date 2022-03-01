@@ -1,6 +1,7 @@
 import { useAppContext } from 'context/useAppContext';
 import { Searchbar } from 'components/ui/searchbar/Searchbar';
 import React, { useCallback, useEffect, useState } from 'react';
+import { SearchSuggestions } from '../search-suggestions/SearchSuggestions';
 
 export const Search: React.FC = () => {
     const { state, dispatch } = useAppContext();
@@ -11,6 +12,10 @@ export const Search: React.FC = () => {
         setSearchTerm(e.target.value);
     }, []);
 
+    const handleSuggestionSelect = useCallback((suggestion: string) => {
+        setSearchTerm(suggestion);
+    }, []);
+
     // Update app state
     useEffect(() => {
         dispatch({ type: 'SET_SEARCH_CRITERIA', payload: { ...state.searchCriteria, title: searchTerm } });
@@ -18,7 +23,9 @@ export const Search: React.FC = () => {
 
     return (
         <>
-            <Searchbar value={searchTerm} onChange={handleSearchbarChange}></Searchbar>
+            <Searchbar value={searchTerm} onChange={handleSearchbarChange}>
+                <SearchSuggestions onSuggestionSelect={handleSuggestionSelect} input={searchTerm} />
+            </Searchbar>
         </>
     );
 };

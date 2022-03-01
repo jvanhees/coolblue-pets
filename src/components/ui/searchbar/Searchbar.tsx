@@ -8,10 +8,9 @@ import { ReactComponent as SearchIcon } from 'assets/icons/search.svg';
 // Use element for semantics
 const Container = styled.div<{ contained: boolean }>`
     width: 100%;
+    max-width: 600px;
     padding: 1em;
     margin-bottom: 1em;
-    display: flex;
-    align-items: stretch;
     border-radius: 2em;
     border: 1px solid ${props => props.theme.palette.shades.medium};
 
@@ -34,6 +33,11 @@ const IconContainer = styled(Icon)`
     margin-right: 1em;
 `;
 
+const InputContainer = styled.div`
+    display: flex;
+    align-items: stretch;
+`;
+
 const Input = styled.input`
     flex-grow: 1;
     border: none;
@@ -41,10 +45,6 @@ const Input = styled.input`
     background: none;
     font-size: ${props => props.theme.typography.fontSize};
     color: ${props => props.theme.palette.black};
-`;
-
-const ResultsContainer = styled.div`
-    border-top: ${props => props.theme.palette.shades.medium};
 `;
 
 type SearchbarProps = {
@@ -56,11 +56,13 @@ type SearchbarProps = {
 export const Searchbar: React.FC<SearchbarProps> = ({ value, onChange, contained = false, children }) => {
     return (
         <Container contained={contained}>
-            <IconContainer primary>
-                <SearchIcon />
-            </IconContainer>
-            <Input value={value} onChange={onChange} />
-            {children && <ResultsContainer>{children}</ResultsContainer>}
+            <InputContainer>
+                <IconContainer primary>
+                    <SearchIcon />
+                </IconContainer>
+                <Input value={value} onChange={onChange} />
+            </InputContainer>
+            {children}
         </Container>
     );
 };
