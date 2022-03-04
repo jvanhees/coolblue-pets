@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import React from 'react';
 import { ThemeProvider } from 'styled-components';
 import { Routes, Route } from 'react-router-dom';
 
@@ -13,7 +13,7 @@ import { AppProvider } from 'context/AppContext';
 import { Footer } from 'components/elements/footer/Footer';
 import { Detail } from 'components/pages/detail/Detail';
 
-const App: FC = () => {
+const App: React.FC = () => {
     return (
         <ThemeProvider theme={theme}>
             <AppProvider>
